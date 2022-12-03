@@ -1,13 +1,14 @@
 import requests
 from datetime import datetime
-
-nutrionix_API ="1b27e70bd82991518b16b6803f41ac79"
-nutrionix_APPID ="41f58f64"
+#ADD YOUR API KEYS AND AUTH TOKENS
+nutrionix_API =""
+nutrionix_APPID =""
 GENDER = "male"
 WEIGHT_KG = "75"
 HEIGHT_CM = "178"
 AGE ="20"
-exercise_endpoint ="https://trackapi.nutritionix.com/v2/natural/exercise"
+exercise_endpoint =""
+add_endpoints = ""
 exercise_text = input("Tell me what exercise did you do :")
 exercise_params ={
     "query":"exercise_text",
@@ -24,8 +25,6 @@ response = requests.post(url=exercise_endpoint,json=exercise_params, headers=exe
 result = response.json()
 print(result)
 
-retrive_endpoints = "https://api.sheety.co/8c9a975e418b512cfe36c6ea240d2192/workoutTracker/workouts"
-add_endpoints = "https://api.sheety.co/8c9a975e418b512cfe36c6ea240d2192/workoutTracker/workouts"
 today_date = datetime.now().strftime("%d%m%Y")
 time_now = datetime.now().strftime("%X")
 
